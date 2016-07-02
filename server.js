@@ -37,9 +37,10 @@ https://api.slack.com/docs/messages/builder
 */
 app.post("/slack", function(req, res) {
   console.log("got a command: " + req.body.command + " text:" + req.body.text);
-  if(req.body.token != process.env.SLACK_SLASH_TOKEN){
+  if(req.body.token != process.env.SLACK_SLASH_TOKEN){ //Probably not required, but docs recommend this and will prevent endpoint from being being used nefariously.
     res.send("Invalid token...")
   } else {
+    //TODO: parse req.body.command/text/channel/user/etc here and do something with it
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify({ 
         response_type: "in_channel",

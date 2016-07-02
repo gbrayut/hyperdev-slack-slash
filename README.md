@@ -7,3 +7,4 @@ Steps:
 
 In Slack you can now use your new /whatever command. It doesn't really do anything right now, but I'll save that for another day
 
+Partially based on Skype bot example at https://hyperdev.com/#!/project/blossom-gambler
